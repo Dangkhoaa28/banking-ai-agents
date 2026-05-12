@@ -1,6 +1,6 @@
 # Banking AI-Agent System
 
-## 📋 Project Overview
+## Project Overview
 
 This project implements a complete **AI agentic workflow** for customer support in the banking domain, fulfilling the requirements of the NLP in Industry course project.
 
@@ -14,7 +14,7 @@ The system intelligently processes customer inquiries through a structured 6-nod
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 Customer Message
@@ -54,7 +54,7 @@ Customer Response or Escalation
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -91,7 +91,7 @@ Server starts at: **http://localhost:8000**
 
 ---
 
-## 📚 API Documentation
+## API Documentation
 
 ### Base URL
 ```
@@ -145,7 +145,7 @@ Simple health check endpoint.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Interactive API Testing
 1. Open http://localhost:8000/docs
@@ -184,12 +184,11 @@ print(f"Processing Time: {data['trace']['processing_time_ms']}ms")
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 project_3/
 ├── run.py                          # Entry point - starts FastAPI server
-├── check_startup.py               # Validation script (recommended to run first)
 ├── requirements.txt               # Python dependencies
 ├── .env.example                   # Environment configuration template
 ├── README.md                      # This file
@@ -211,8 +210,8 @@ project_3/
 │   │
 │   ├── nodes/
 │   │   ├── __init__.py
-│   │   ├── intent_node.py        # 🎯 Intent detection (Lab 2 model)
-│   │   ├── priority_node.py      # Priority/risk scoring
+│   │   ├── intent_node.py        # Intent detection (Lab 2 model)
+│   │   ├── priority_node.py      # ority/risk scoring
 │   │   ├── policy_node.py        # Policy retrieval
 │   │   ├── draft_node.py         # LLM response generation
 │   │   ├── validation_node.py    # Quality validation
@@ -266,9 +265,9 @@ API_PORT=8000
 ---
 
 ## ⚙️ System Components
+System Components
 
-### 1️⃣ Intent Detection Node
-- **Uses**: Fine-tuned model from Lab 2
+### 1.s**: Fine-tuned model from Lab 2
 - **Input**: Customer message
 - **Output**: Intent classification + confidence
 - **Supported Intents**:
@@ -278,7 +277,7 @@ API_PORT=8000
   - `refund_request` - Refund/refund request
   - `general_inquiry` - Other questions
 
-### 2️⃣ Priority Detection Node
+### 2. Priority Detection Node
 - **Method**: Keyword-based scoring
 - **Output**: Priority level (HIGH/MEDIUM/LOW)
 - **Escalation**: HIGH priority issues trigger automatic escalation
@@ -287,18 +286,18 @@ API_PORT=8000
   - MEDIUM: transfer, refund, error, fail, problem
   - LOW: inquiry, question, general
 
-### 3️⃣ Policy Retrieval Node
+### 3. Policy Retrieval Node
 - **Database**: Dummy policies (easily replaceable with real database)
 - **Mapping**: Intent → FAQ/Policy snippet
 - **Usage**: Provides context for response generation
 
-### 4️⃣ Response Drafting Node
+### 4. Response Drafting Node
 - **LLM**: Ollama with gpt-oss-20b
 - **Inputs**: Message, intent, priority, policy
 - **Output**: Professional, context-aware response
 - **Prompt**: Optimized for banking domain
 
-### 5️⃣ Validation Node
+### 5. Validation Node
 - **Checks**:
   1. Response not too brief (>20 chars)
   2. Fallback detection (LLM unavailable)
@@ -308,7 +307,7 @@ API_PORT=8000
   6. Length balance (<500 chars)
 - **Output**: VALID/INVALID + issues + confidence
 
-### 6️⃣ Router/Escalation Node
+### 6. Router/Escalation Node
 - **Rules**:
   - HIGH priority → Escalate
   - INVALID response → Escalate
@@ -318,11 +317,11 @@ API_PORT=8000
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Ollama Connection Error
 ```
-❌ Cannot connect to Ollama at http://localhost:11434
+Cannot connect to Ollama at http://localhost:11434
 ```
 **Solution:**
 ```bash
@@ -332,7 +331,7 @@ ollama serve
 
 ### Model Not Found
 ```
-❌ Model not found: gpt-oss-20b
+Model not found: gpt-oss-20b
 ```
 **Solution:**
 ```bash
@@ -342,7 +341,7 @@ ollama pull gpt-oss-20b
 
 ### Intent Model Loading Failed
 ```
-⚠️  Model loading failed: Model path not found
+Model loading failed: Model path not found
 ```
 **Solution:**
 ```bash
@@ -370,7 +369,7 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## 📊 Performance
+## Performance
 
 | Component | Time |
 |-----------|------|
@@ -390,7 +389,7 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## 🎓 Lab Integration
+## Lab Integration
 
 **From Lab 2 (Project 2):**
 - Uses fine-tuned intent classification model
@@ -405,7 +404,7 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## ✅ Requirements Compliance
+## Requirements Compliance
 
 - [x] AI agentic pipeline for banking customer support
 - [x] Intent Detection Node (uses Lab 2 fine-tuned model)
@@ -422,13 +421,13 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
 **To submit project:**
-1. ✅ Ensure all nodes are working
-2. ✅ Record video demonstration (2-5 minutes)
-3. ✅ Push to GitHub
-4. ✅ Include video URL in README
+1. Ensure all nodes are working
+2. Record video demonstration (2-5 minutes)
+3. Push to GitHub
+4. Include video URL in README
 
 **Production improvements:**
 - [ ] Add database backend for policies
@@ -440,7 +439,7 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## 📞 Support
+## Support
 
 **For issues:**
 1. Run `python check_startup.py` to diagnose
@@ -450,7 +449,7 @@ ERROR: [Errno 48] Address already in use
 
 ---
 
-## 📝 License
+## License
 
 This project is part of the NLP in Industry course at University of Science, HCMC.
 

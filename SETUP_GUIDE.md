@@ -7,13 +7,13 @@
 - ~10GB disk space (for models)
 - Ollama running locally or accessible via URL
 
-### 1️⃣ Install Dependencies
+### 1. Install Dependencies
 ```powershell
 cd project_3
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Setup Ollama
+### 2. Setup Ollama
 
 **Local Setup (Recommended)**
 ```bash
@@ -24,21 +24,21 @@ ollama serve  # Runs on http://localhost:11434
 ```
 
 **Or use Google Colab + Pinggy**
-- See `Ollama-Pinggy.ipynb` in project_2
+- See `Ollama-Pinggy.ipynb` if available
 
-### 3️⃣ Configure Environment
+### 3. Configure Environment
 Copy `.env.example` to `.env` and set your Ollama URL:
 ```env
 OLLAMA_BASE_URL=http://localhost:11434
 MODEL_NAME=gpt-oss-20b
 ```
 
-### 4️⃣ Run the Server
+### 4. Run the Server
 ```powershell
 python run.py
 ```
 
-### 5️⃣ Test the API
+### 5. Test the API
 Visit: http://localhost:8000/docs
 
 ---

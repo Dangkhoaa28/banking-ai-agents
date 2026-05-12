@@ -28,7 +28,7 @@ class IntentNode:
             print("✓ Model loaded successfully")
             
         except Exception as e:
-            print(f"⚠️  Model loading failed: {e}")
+            print(f"  Model loading failed: {e}")
             print("Using fallback rule-based system instead.")
             self.is_loaded = False
 
