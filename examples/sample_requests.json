@@ -1,0 +1,22 @@
+[
+    {
+        "message": "I tried to transfer money to my friend but it failed and the money is gone. Help!",
+        "customer_id": "CUST_001"
+    },
+    {
+        "message": "My new debit card hasn't arrived yet. It's been 15 days.",
+        "customer_id": "CUST_002"
+    },
+    {
+        "message": "I think someone stole my card, there are unauthorized charges and I want a refund.",
+        "customer_id": "CUST_003"
+    },
+    {
+        "message": "I can't log in, my account says it is blocked.",
+        "customer_id": "CUST_004"
+    },
+    {
+        "message": "What are your branch opening hours?",
+        "customer_id": "CUST_005"
+    }
+]
